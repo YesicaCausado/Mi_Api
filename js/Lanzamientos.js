@@ -11,3 +11,11 @@ async function Lanzamientos(h) {
         <p><strong>Éxito:</strong> ${data.success === true ? 'Sí' : (data.success === false ? 'No' : 'Desconocido')}</p>
     `;
 }
+
+// Helper que se llama desde los items de la lista (onclick)
+function Detalle(id) {
+    // Si el id es numérico y el arreglo lanzamientos existe, buscar ID real
+    Lanzamientos(id);
+}
+
+window.Detalle = Detalle;
