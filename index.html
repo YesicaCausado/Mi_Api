@@ -1,36 +1,40 @@
-
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi API SpaceX</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
+        <nav class="c-nav">
         <button onclick="Home()">Home</button>
         <button onclick="Informacion()">Informacion</button>
         <button onclick="Original()">Original</button>
+        <button onclick="LanzamientosPage()">Lanzamientos</button>
         <button onclick="Favoritos()">Favoritos</button>
     </nav>
-    <div id ="root">
-        <!--aqui se agrega lo que hagamos en js  -->
 
+    <div id="root">
+        <!-- Contenido dinámico -->
     </div>
-    <!--llamar a los js -->
+
+    <!-- Scripts -->
     <script src="js/Conexion.js"></script>
-    <script src="js/Home.js"></script>
     <script src="js/Lanzamientos.js"></script>
+    <script src="js/LanzamientosPage.js"></script>
+    <script src="js/Home.js"></script>
     <script src="js/Original.js"></script>
     <script src="js/Informacion.js"></script>
     <script src="js/Favoritos.js"></script>
+    <script src="js/detalle.js"></script>
     <script>
+        // Al cargar la página, intentar cargar datos y mostrar Home automáticamente.
         if (typeof General === 'function') {
             General();
+        } else if (typeof Home === 'function') {
+            Home();
         }
     </script>
-
 </body>
 </html>
